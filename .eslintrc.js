@@ -1,17 +1,34 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
-  },
-  extends: [
-    'plugin:vue/essential',
-    '@vue/airbnb',
-  ],
-  rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    browser: true,
+    node: true
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: 'babel-eslint'
   },
-};
+  extends: [
+    // https://github.com/vuejs/eslint-plugin-vue
+    // https://github.com/standard/eslint-config-standard
+    'plugin:vue/recommended',
+    'standard'
+  ],
+  plugins: [
+    'vue'
+  ],
+  rules: {
+    'object-property-newline': 'off',
+    'no-new': 'off',
+    'no-return-await': 'off',
+    'camelcase': 'off',
+    'indent': ['error', 2],
+    'no-multiple-empty-lines': ['error', { 'max': 2 }],
+    'vue/name-property-casing': 'off',
+    'vue/html-self-closing': ['error', {
+      'html': { 'normal': 'never' }
+    }],
+    'vue/max-attributes-per-line': 'off',
+    'vue/html-indent': 'off',
+    'vue/require-default-prop': 'off'
+  }
+}

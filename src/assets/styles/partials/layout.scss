@@ -1,0 +1,30 @@
+$sizes: (
+        none: 0,
+        xs: 3,
+        s: 5,
+        m: 10,
+        l: 15,
+        xl: 20
+);
+$properties: (
+        m: 'margin',
+        p: 'padding'
+);
+$directions: (
+        t: 'top',
+        r: 'right',
+        b: 'bottom',
+        l: 'left',
+        a: ''
+);
+
+@each $size-key, $size in $sizes {
+  @each $property-key, $property in $properties {
+    @each $direction-key, $direction in $directions {
+      $css-property: if($direction == '', $property, #{$property}-#{$direction});
+      .#{$property-key}#{$direction-key}-#{$size-key} {
+        #{$css-property}: #{$size}px;
+      }
+    }
+  }
+}
