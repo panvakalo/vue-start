@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "node-sass": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js -o src/assets/styles/css src/assets/styles/compile.scss",
+    "dev": "npm run node-sass && npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -34,7 +36,9 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
+    "node-sass-glob-importer": "^5.3.1",
     "sass-loader": "^7.1.0",
+    "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.5.21"
   }
 }

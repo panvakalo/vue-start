@@ -1,0 +1,8 @@
+.vertical-middle {
+  display: table;
+
+  .vertical-middle__inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
