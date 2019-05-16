@@ -1,6 +1,6 @@
 <template>
-  <div class="full-width full-height vertical-middle">
-    <div class="vertical-middle__inner">
+  <div class="full__width full__height vertical-middle">
+    <div class="vertical-middle__inner text-align__center">
       Here
     </div>
   </div>

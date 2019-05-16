@@ -1,21 +1,30 @@
+// reset
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// create margin and padding rule-sets
 $sizes: (
-        none: 0,
-        xs: 3,
-        s: 5,
-        m: 10,
-        l: 15,
-        xl: 20
+  none: 0,
+  xs: 3,
+  s: 5,
+  m: 10,
+  l: 15,
+  xl: 20
 );
 $properties: (
-        m: 'margin',
-        p: 'padding'
+  m: 'margin',
+  p: 'padding'
 );
 $directions: (
-        t: 'top',
-        r: 'right',
-        b: 'bottom',
-        l: 'left',
-        a: ''
+  t: 'top',
+  r: 'right',
+  b: 'bottom',
+  l: 'left',
+  a: ''
 );
 
 @each $size-key, $size in $sizes {
@@ -26,5 +35,14 @@ $directions: (
         #{$css-property}: #{$size}px;
       }
     }
+  }
+}
+
+// create align rule-sets
+$align-directions: left, right, center, justify, inherit;
+
+@each $current-direction in $align-directions {
+  .text-align__#{$current-direction} {
+    text-align: #{$current-direction};
   }
 }
