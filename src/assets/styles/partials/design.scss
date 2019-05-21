@@ -26,12 +26,13 @@
   }
 }
 
-// form inputs
-input[type='text'], input[type='password'] {
-  background-color: transparent !important;
-  border: 1px solid $black;
-  border-radius: 1px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  padding: 10px;
+// background-colors
+@each $color-key, $color in $colors {
+  .bg__#{$color-key} {
+    background-color: #{$color};
+  }
+
+  .text__#{$color-key} {
+    color: #{$color};
+  }
 }
