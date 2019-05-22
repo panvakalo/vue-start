@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://www.amock.io/api/panvakalo/'
+export const BASE_URL = 'https://panvakalo.free.beeceptor.com' // custom mock REST server
