@@ -7,7 +7,7 @@
             Log in
           </h2>
         </div>
-        <section class="pa-l bg__gray-lighter">
+        <section class="pa-l bg__gray-lighter login">
           <form @submit.prevent="auth">
             <input
               v-model="loginForm.username"
