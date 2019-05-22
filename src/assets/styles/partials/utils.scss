@@ -1,7 +1,7 @@
 .vertical-middle {
   display: table;
 
-  .vertical-middle__inner {
+  &__inner {
     display: table-cell;
     vertical-align: middle;
   }
@@ -15,6 +15,22 @@
   &__height {
     height: 100%;
   }
+}
+
+.float {
+  &-left {
+    float: left;
+  }
+
+  &-right {
+    float: right;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .overflow-hidden {

@@ -4,7 +4,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #456;
 }
 
 // create margin and padding rule-sets
@@ -81,5 +80,11 @@ $media-columns: (
         width: #{1% * $column-size};
       }
     }
+  }
+}
+
+.display {
+  &-inline {
+    display: inline-block;
   }
 }

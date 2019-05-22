@@ -1,5 +1,5 @@
 <template>
-  <div class="full__width full__height vertical-middle">
+  <div class="full__width full__height vertical-middle bg__blue-gray">
     <div class="vertical-middle__inner text-align__center pa-s">
       <div class="m-auto l4 m6 s10 xs12 text-color__black">
         <div class="bg__gray overflow-hidden">
@@ -13,6 +13,7 @@
               v-model="loginForm.username"
               type="text"
               name="username"
+              required
               class="xs12 text-color__black"
               placeholder="Username"
             >
@@ -20,10 +21,13 @@
               v-model="loginForm.password"
               type="password"
               name="password"
+              required
               class="xs12 text-color__black"
               placeholder="Password"
             >
-            <button type="submit">
+            <button
+              type="submit"
+            >
               Login
             </button>
           </form>
@@ -48,7 +52,12 @@ export default {
   methods: {
     ...mapActions('customer', ['login']),
     async auth () {
-      await this.login(this.loginForm)
+      try {
+        await this.login(this.loginForm)
+        this.$router.push('/home')
+      } catch (error) {
+        console.log('Error while authenticating user: ' + error)
+      }
     }
   }
 }

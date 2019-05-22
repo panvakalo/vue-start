@@ -1,6 +1,12 @@
 # vue-start
 
-## Project setup
+###Description
+This is a repository for any VueJS starting project, with the following technologies implemented:
+- Vue-router
+- Custom Mock API Server
+- Token authentication
+
+### Project setup
 ```
 npm install
 ```
@@ -35,5 +41,8 @@ npm run test:e2e
 npm run test:unit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Developer's notes
+###Login
+I have used Mockable's (https://www.mockable.io) mock API server to simulate the authentication while user tries to 
+Login. The response is always 200 no matter the credentials, otherwise I could use a GET call with some comparing, which 
+kinda seemed too cumbersome and I wanted to simulate as much as possible a POST request.

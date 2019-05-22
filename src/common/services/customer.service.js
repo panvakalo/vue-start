@@ -9,5 +9,13 @@ export default {
     } catch (error) {
       console.log(error)
     }
+  },
+  async logout () {
+    const url = `${BASE_URL}/logout`
+    try {
+      return await axios.post(url)
+    } catch (error) {
+      console.log(error)
+    }
   }
 }
