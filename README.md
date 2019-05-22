@@ -1,10 +1,9 @@
 # vue-start
 
-###Description
+### Description
 This is a repository for any VueJS starting project, with the following technologies implemented:
 - Vue-router
 - Custom Mock API Server
-- Token authentication
 
 ### Project setup
 ```
